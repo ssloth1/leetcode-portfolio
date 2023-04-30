@@ -21,7 +21,7 @@ int rangeSumBST(struct TreeNode* root, int low, int high){
         return rangeSumBST(root->right, low, high);
     } else if (root->val > high) {
         // If the given root value is greater than the provided upper bound, we need to traverse the left subtree.
-        return rangeSumBST(root0->left, low, high);
+        return rangeSumBST(root->left, low, high);
     } else {
         // The node value must be within range, so we add it its value and recursively search both subtrees.
         return rangeSumBST(root->left, low, high) + rangeSumBST(root->right, low, high) + root->val;
